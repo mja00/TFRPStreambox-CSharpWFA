@@ -10,8 +10,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using AutoUpdaterDotNET;
+using System.Windows;
+using WPFCustomMessageBox;
 
 namespace TFRPStreambox_CSharpWFA
 {
@@ -104,7 +105,7 @@ namespace TFRPStreambox_CSharpWFA
             _1GUnit1ToolTip.SetToolTip(SkipGently, "Character: Jack Deakins");
             _1GUnit1ToolTip.SetToolTip(SomeTexas_Dude, "Character: Nolan Ryan");
             _1GUnit1ToolTip.SetToolTip(Ssaab, "Character: Al Saab");
-            _1GUnit1ToolTip.SetToolTip(TastyTV, "Characters: Bobby Irvine | Harold Wilson | Norman Wilson | Patrick Flanegan | William Parker");
+           // _1GUnit1ToolTip.SetToolTip(TastyTV, "Characters: Bobby Irvine | Harold Wilson | Norman Wilson | Patrick Flanegan | William Parker");
             _1GUnit1ToolTip.SetToolTip(Thadrius, "Characters: Brayben Dazzler | Johnny Dazzler | Slappy McGaffey");
             _1GUnit1ToolTip.SetToolTip(TheBuddha3, "Characters: Lang Buddha | Tyrone Jones");
             _1GUnit1ToolTip.SetToolTip(thelawmangaming, "Character: Robert Beck");
@@ -121,22 +122,48 @@ namespace TFRPStreambox_CSharpWFA
             _1GUnit1ToolTip.SetToolTip(Xiceman, "Characters: Mike Bayo | Rusty Dawns");
             _1GUnit1ToolTip.SetToolTip(XProph3cyx, "Character: Ichiro Suyaki");
             _1GUnit1ToolTip.SetToolTip(Zaquelle, "Characters: Amanda Williams | Emma Moore | Zoey Lyrais");
+            _1GUnit1ToolTip.SetToolTip(Mythematic, "Characters: Harhiko Oshima | Jack Wolfe | Mike RosoftSam");
+            _1GUnit1ToolTip.SetToolTip(SaffyPie101, "Characters: Holly Frost | Lily Murdock");
+            AutoUpdater.Start("http://kivl.playat.ch/tfrpupdate.xml");
+            AutoUpdater.ShowSkipButton = false;
+            AutoUpdater.ShowRemindLaterButton = false;
             refreshBackgroundWorker.RunWorkerAsync();
             refreshButton.Text = "Refreshing";
             refreshButton.Enabled = false;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
 
         }
+
+        //private void Form1_Load(object sender, EventArgs e)
+        //{
+         //   AutoUpdater.Start("http://kivl.playat.ch/tfrpupdate.xml");
+        //}
 
 
 
         public static string streamer;
         public static void displayStream()
         {
-            Process cmd = new Process();
-            cmd.StartInfo.FileName = "cmd.exe";
-            cmd.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            cmd.StartInfo.Arguments = "/C data\\streamlink.exe http://twitch.tv/" + streamer + " best";
-            cmd.Start();
+
+            MessageBoxResult result = CustomMessageBox.ShowYesNoCancel(
+                "Which type of stream would you like open?",
+                "Choose stream type",
+                "VLC + Chat",
+                "Twitch Redirect",
+                "Cancel");
+            if (result == MessageBoxResult.Yes)
+            {
+                Process cmd = new Process();
+                cmd.StartInfo.FileName = "cmd.exe";
+                cmd.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                cmd.StartInfo.Arguments = "/C data\\streamlink.exe http://twitch.tv/" + streamer + " best";
+                cmd.Start();
+                Process.Start("https://twitch.tv/" + streamer + "/chat");
+            }
+            else if (result == MessageBoxResult.No)
+            {
+                Process.Start("https://twitch.tv/" + streamer);
+            }
         }
         private  async void _1GUnit1_Click(object sender, EventArgs e)
         {
@@ -171,7 +198,7 @@ namespace TFRPStreambox_CSharpWFA
             Form1.streamer = "alexusnightingale";
             Form1.displayStream();
             await Task.Delay(10000);
-            alexusnightingale.Text = "alexusnightingale";
+            alexusnightingale.Text = "alexusnightingal";
         }
 
         private async void AndyMilonakis_Click(object sender, EventArgs e)
@@ -210,457 +237,589 @@ namespace TFRPStreambox_CSharpWFA
             boscoreli_gaming.Text = "boscoreli";
         }
 
-        private void BPZ_Click(object sender, EventArgs e)
+        private async void BPZ_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/bpz best");
+            BPZ.Text = "Loading";
+            Form1.streamer = "bpz";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            BPZ.Text = "bpz";
         }
 
-        private void BuckkNaked_Click(object sender, EventArgs e)
+        private async void BuckkNaked_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/buckknaked best");
+            BuckkNaked.Text = "Loading";
+            Form1.streamer = "buckknaked";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            BuckkNaked.Text = "BuckkNaked";
         }
 
-        private void BurkeBlack_Click(object sender, EventArgs e)
+        private async void BurkeBlack_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/burkeblack best");
+            BurkeBlack.Text = "Loading";
+            Form1.streamer = "burkeblack";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            BurkeBlack.Text = "BurkeBlack";
         }
 
-        private void Ch1ckenb0ne_Click(object sender, EventArgs e)
+        private async void Ch1ckenb0ne_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/ch1ckenb0ne best");
+            Ch1ckenb0ne.Text = "Loading";
+            Form1.streamer = "ch1ckenb0ne";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Ch1ckenb0ne.Text = "Ch1ckenb0ne";
         }
 
-        private void ChiefDas_Click(object sender, EventArgs e)
+        private async void ChiefDas_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/chiefdas best");
+            ChiefDas.Text = "Loading";
+            Form1.streamer = "chiefdas";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            ChiefDas.Text = "ChiefDas";
         }
 
-        private void ClassyPax_Click(object sender, EventArgs e)
+        private async void ClassyPax_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/classypax best");
+            ClassyPax.Text = "Loading";
+            Form1.streamer = "classypax";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            ClassyPax.Text = "ClassyPax";
         }
 
-        private void CletusBeuford_Click(object sender, EventArgs e)
+        private async void CletusBeuford_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/ClestusBeuford best");
+            CletusBueford.Text = "Loading";
+            Form1.streamer = "cletusbeuford";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            CletusBueford.Text = "CletusBeuford";
         }
 
-        private void CoolidgeHD_Click(object sender, EventArgs e)
+        private async void CoolidgeHD_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/coolidgehd best");
+            CoolidgeHD.Text = "Loading";
+            Form1.streamer = "coolidgehd";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            CoolidgeHD.Text = "CoolidgeHD";
         }
 
-        private void dasMehdi_Click(object sender, EventArgs e)
+        private async void dasMehdi_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/dasmehdi best");
+            dasMehdi.Text = "Loading";
+            Form1.streamer = "dasmehdi";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            dasMehdi.Text = "dasMehdi";
         }
 
-        private void DisbeArex_Click(object sender, EventArgs e)
+        private async void DisbeArex_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/disbearex best");
+            DisbeArex.Text = "Loading";
+            Form1.streamer = "disbearex";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            DisbeArex.Text = "DisbeArex";
         }
 
-        private void djkwix_Click(object sender, EventArgs e)
+        private async void djkwix_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/djkwix best");
+            djkwix.Text = "Loading";
+            Form1.streamer = "djkwix";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            djkwix.Text = "djkwix";
         }
 
-        private void DrunkBabyYoshi_Click(object sender, EventArgs e)
+        private async void DrunkBabyYoshi_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/drunkbabyyoshi best");
+            DrunkBabyYoshi.Text = "Loading";
+            Form1.streamer = "drunkbabyyoshi";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            DrunkBabyYoshi.Text = "DrunkBabyYo";
         }
 
-        private void Esoluu_Click(object sender, EventArgs e)
+        private async void Esoluu_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/esoluu best");
+            Esoluu.Text = "Loading";
+            Form1.streamer = "esoluu";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Esoluu.Text = "Esoluu";
         }
 
-        private void FinKone_Click(object sender, EventArgs e)
+        private async void FinKone_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/finkone best");
+            Finkone.Text = "Loading";
+            Form1.streamer = "finkone";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Finkone.Text = "FinKone";
         }
 
-        private void FistOfTheWalrus_Click(object sender, EventArgs e)
+        private async void FistOfTheWalrus_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/fistofthewalrus best");
+            FistofTheWalrus.Text = "Loading";
+            Form1.streamer = "fistofthewalrus";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            FistofTheWalrus.Text = "FistOfTheWalrus";
         }
 
-        private void Five0AnthO_Click(object sender, EventArgs e)
+        private async void Five0AnthO_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/five0antho best");
+            Five0AnthO.Text = "Loading";
+            Form1.streamer = "five0anth0";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Five0AnthO.Text = "Five0AnthO";
         }
 
-        private void GeeFamous92_Click(object sender, EventArgs e)
+        private async void GeeFamous92_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/geefamous92 best");
+            GeeFamous92.Text = "Loading";
+            Form1.streamer = "geefamous92";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            GeeFamous92.Text = "GeeFamous92";
         }
 
-        private void GhilleGuyTV_Click(object sender, EventArgs e)
+        private async void GhilleGuyTV_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/ghilleguytv best");
+            GhilleGuyTV.Text = "Loading";
+            Form1.streamer = "ghilleguytv";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            GhilleGuyTV.Text = "GhilleGuyTV";
         }
 
-        private void GiantFaffle_Click(object sender, EventArgs e)
+        private async void GiantFaffle_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/giantfaffle best");
+            GiantFaffle.Text = "Loading";
+            Form1.streamer = "giantfaffle";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            GiantFaffle.Text = "GiantFaffle";
         }
 
-        private void GloryD_Click(object sender, EventArgs e)
+        private async void GloryD_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/gloryd best");
+            GloryD.Text = "Loading";
+            Form1.streamer = "gloryd";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            GloryD.Text = "GloryD";
         }
 
-        private void Harryow_Click(object sender, EventArgs e)
+        private async void Harryow_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/harryow best");
+            Harryow.Text = "Loading";
+            Form1.streamer = "harryow";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Harryow.Text = "Harryow";
         }
 
-        private void Hazard_Click(object sender, EventArgs e)
+        private async void Hazard_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/hazard best");
+            Hazard.Text = "Loading";
+            Form1.streamer = "hazard";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Hazard.Text = "Hazard";
         }
 
-        private void Hirona_Click(object sender, EventArgs e)
+        private async void Hirona_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/hirona best");
+            Hirona.Text = "Loading";
+            Form1.streamer = "hirona";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Hirona.Text = "Hirona";
         }
 
-        private void IAmSp00n_Click(object sender, EventArgs e)
+        private async void IAmSp00n_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/iamsp00n best");
+            IAmSp00n.Text = "Loading";
+            Form1.streamer = "iamsp00n";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            IAmSp00n.Text = "IAmSp00n";
         }
 
-        private void ImmortalLive_Click(object sender, EventArgs e)
+        private async void ImmortalLive_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/immortallive best");
+            ImmortalLive.Text = "Loading";
+            Form1.streamer = "immortallive";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            ImmortalLive.Text = "ImmortalLive";
         }
 
-        private void ironmonkeytv_Click(object sender, EventArgs e)
+        private async void ironmonkeytv_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/ironmonkeytv best");
+            ironmonkeytv.Text = "Loading";
+            Form1.streamer = "ironmonkeytv";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            ironmonkeytv.Text = "IronMonkeyTV";
         }
 
-        private void itzButch_Click(object sender, EventArgs e)
+        private async void itzButch_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/itzbutch best");
+            itzButch.Text = "Loading";
+            Form1.streamer = "itzbutch";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            itzButch.Text = "itzButch";
         }
 
-        private void J_Reed_Click(object sender, EventArgs e)
+        private async void J_Reed_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/j_reed best");
+            J_Reed.Text = "Loading";
+            Form1.streamer = "j_reed";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            J_Reed.Text = "J_Reed";
         }
 
-        private void JaboodyShow_Click(object sender, EventArgs e)
+        private async void JaboodyShow_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/jaboodyshow best");
+            JaboodyShow.Text = "Loading";
+            Form1.streamer = "jaboodyshow";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            JaboodyShow.Text = "JaboodyShow";
         }
 
-        private void jake_terek_Click(object sender, EventArgs e)
+        private async void jake_terek_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/jake_terek best");
+            jake_terek.Text = "Loading";
+            Form1.streamer = "jake_terek";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            jake_terek.Text = "Jake_Terek";
         }
 
-        private void JmxTwiztid_Click(object sender, EventArgs e)
+        private async void JmxTwiztid_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/jmxtwiztid best");
+            JmxTwiztid.Text = "Loading";
+            Form1.streamer = "jmxtwiztid";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            JmxTwiztid.Text = "JmxTwiztid";
         }
 
-        private void John782_Click(object sender, EventArgs e)
+        private async void John782_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/john782 best");
+            John782.Text = "Loading";
+            Form1.streamer = "john782";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            John782.Text = "John782";
         }
 
-        private void Jolly__Jess_Click(object sender, EventArgs e)
+        private async void Jolly__Jess_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/jolly_jess best");
+            Jolly__Jess.Text = "Loading";
+            Form1.streamer = "Jolly__Jess";
+            Form1.displayStream();
+            await Task.Delay(10000);
+            Jolly__Jess.Text = "Jolly__Jess";
         }
 
-        private void JTtroy_Click(object sender, EventArgs e)
+        private async void JTtroy_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/jttroy best");
         }
 
-        private void kaceytron_Click(object sender, EventArgs e)
+        private async void kaceytron_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/kaceytron best");
         }
 
-        private void KaptainKpress_Click(object sender, EventArgs e)
+        private async void KaptainKpress_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/kaptainkpress best");
         }
 
-        private void KatieRouu_Click(object sender, EventArgs e)
+        private async void KatieRouu_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/katierouu best");
         }
 
-        private void Kithicor27_Click(object sender, EventArgs e)
+        private async void Kithicor27_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/kithicor27 best");
         }
 
-        private void LarryX7_Click(object sender, EventArgs e)
+        private async void LarryX7_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/larrx7 best");
         }
 
-        private void lawdog1096_Click(object sender, EventArgs e)
+        private async void lawdog1096_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/lawdog1096 best");
         }
 
-        private void LiftYourGame_Click(object sender, EventArgs e)
+        private async void LiftYourGame_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/liftyourgame best");
         }
 
-        private void loveANF3L_Click(object sender, EventArgs e)
+        private async void loveANF3L_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/loveang3l best");
         }
 
-        private void mart1n_g_Click(object sender, EventArgs e)
+        private async void mart1n_g_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/mart1n_g best");
         }
 
-        private void MiltonTPike1_Click(object sender, EventArgs e)
+        private async void MiltonTPike1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/miltontpike1 best");
         }
 
-        private void MintsTV_Click(object sender, EventArgs e)
+        private async void MintsTV_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/mintstv best");
         }
 
-        private void MrMoonsHouse_Click(object sender, EventArgs e)
+        private async void MrMoonsHouse_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/mrmoonshouse best");
         }
 
-        private void MsDeathRabbit_Click(object sender, EventArgs e)
+        private async void MsDeathRabbit_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/msdeathrabbit best");
         }
 
-        private void Og_BluePill_Click(object sender, EventArgs e)
+        private async void Og_BluePill_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/og_bluepill best");
         }
 
-        private void PENTAhearth_Click(object sender, EventArgs e)
+        private async void PENTAhearth_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/pentahearth best");
         }
 
-        private void Pinky_Click(object sender, EventArgs e)
+        private async void Pinky_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/pinky best");
         }
 
-        private void PmsProxy_Click(object sender, EventArgs e)
+        private async void PmsProxy_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/pmsproxy best");
         }
 
-        private void PorkMarshmallow_Click(object sender, EventArgs e)
+        private async void PorkMarshmallow_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/marshmallow best");
         }
 
-        private void PrimusPalus_Click(object sender, EventArgs e)
+        private async void PrimusPalus_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/primuspalus best");
         }
 
-        private void Purrluna_Click(object sender, EventArgs e)
+        private async void Purrluna_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/purrluna best");
         }
 
-        private void Pydrex_Click(object sender, EventArgs e)
+        private async void Pydrex_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/pydrex best");
         }
 
-        private void RajjPatel_Click(object sender, EventArgs e)
+        private async void RajjPatel_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/rajjpatel best");
         }
 
-        private void Rastafied_Click(object sender, EventArgs e)
+        private async void Rastafied_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/rastafied best");
         }
 
-        private void RastaRafikii_Click(object sender, EventArgs e)
+        private async void RastaRafikii_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/rastarafikii best");
         }
 
-        private void SAMZHIT_Click(object sender, EventArgs e)
+        private async void SAMZHIT_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/samzhit best");
         }
 
-        private void Sarapocalypse_Click(object sender, EventArgs e)
+        private async void Sarapocalypse_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/sarapocalypse best");
         }
 
-        private void SayeedBlack_Click(object sender, EventArgs e)
+        private async void SayeedBlack_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/sayeedblack best");
         }
 
-        private void SeanKingV_Click(object sender, EventArgs e)
+        private async void SeanKingV_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/seankingv best");
         }
 
-        private void Selvek_Click(object sender, EventArgs e)
+        private async void Selvek_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/selvek best");
         }
 
-        private void ShaZ_Click(object sender, EventArgs e)
+        private async void ShaZ_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/shaz best");
         }
 
-        private void SheriffEli_Click(object sender, EventArgs e)
+        private async void SheriffEli_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/sheriffeli best");
         }
 
-        private void SHPTV_Click(object sender, EventArgs e)
+        private async void SHPTV_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/shptv best");
         }
 
-        private void SilentSentry_Click(object sender, EventArgs e)
+        private async void SilentSentry_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/silentsentry best");
         }
 
-        private void SimplyJulian_Click(object sender, EventArgs e)
+        private async void SimplyJulian_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/simplyjulian best");
         }
 
-        private void SirCoffeestain_Click(object sender, EventArgs e)
+        private async void SirCoffeestain_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/sircoffeestain best");
         }
 
-        private void SirPinkleston00_Click(object sender, EventArgs e)
+        private async void SirPinkleston00_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/sirpinkleston00 best");
         }
 
-        private void SkipGently_Click(object sender, EventArgs e)
+        private async void SkipGently_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/skipgently best");
         }
 
-        private void SomeTexas_Dude_Click(object sender, EventArgs e)
+        private async void SomeTexas_Dude_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/some_texas_dude best");
         }
 
-        private void Ssaab_Click(object sender, EventArgs e)
+        private async void Ssaab_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/ssaab best");
         }
 
-        private void TastyTV_Click(object sender, EventArgs e)
+        private async void TastyTV_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/tastytv best");
         }
 
-        private void Thadrius_Click(object sender, EventArgs e)
+        private async void Thadrius_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/thadrius best");
         }
 
-        private void TheBuddha3_Click(object sender, EventArgs e)
+        private async void TheBuddha3_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/thebuddha3 best");
         }
 
-        private void thelawmangaming_Click(object sender, EventArgs e)
+        private async void thelawmangaming_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/thelawmangaming best");
         }
 
-        private void TigerWriter_Click(object sender, EventArgs e)
+        private async void TigerWriter_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/tigerwriter best");
         }
 
-        private void Timmac_Click(object sender, EventArgs e)
+        private async void Timmac_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/timmac best");
         }
 
-        private void TVSBOH_Click(object sender, EventArgs e)
+        private async void TVSBOH_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/tvsboh best");
         }
 
-        private void UndeadBaron_Click(object sender, EventArgs e)
+        private async void UndeadBaron_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/undeadbaron best");
         }
 
-        private void ValkyrieSpirit_Click(object sender, EventArgs e)
+        private async void ValkyrieSpirit_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/valkyriespirit best");
         }
 
-        private void Will_ko_Click(object sender, EventArgs e)
+        private async void Will_ko_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/will_ko best");
         }
 
-        private void willitkimchi_Click(object sender, EventArgs e)
+        private async void willitkimchi_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/willitkimchi best");
         }
 
-        private void Wish_Click(object sender, EventArgs e)
+        private async void Wish_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/wish best");
         }
 
-        private void X_xZimx_X_Click(object sender, EventArgs e)
+        private async void X_xZimx_X_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/x_xzimx_x best");
         }
 
-        private void Xiceman_Click(object sender, EventArgs e)
+        private async void Xiceman_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/xiceman best");
         }
 
-        private void XProph3cyx_Click(object sender, EventArgs e)
+        private async void XProph3cyx_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/xproph3cyx best");
         }
 
-        private void Zaquelle_Click(object sender, EventArgs e)
+        private async void Zaquelle_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/zaquelle best");
         }
 
-        private void SheepDog59_Click(object sender, EventArgs e)
+        private async void SheepDog59_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/sheepdog59 best");
         }
 
-        private void TheRealSpectral_Click(object sender, EventArgs e)
+        private async void TheRealSpectral_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/therealspectral best");
         }
@@ -2247,7 +2406,7 @@ namespace TFRPStreambox_CSharpWFA
                 LiveCheck.thereallive = "false";
             }
             //SheepDog59 Live check
-            string sheeu = @"https://api.twitch.tv/kraken/streams/Zaquelle?client_id=xskte44y2wfqin464ayecyc09nikcj";
+            string sheeu = @"https://api.twitch.tv/kraken/streams/sheepdog59?client_id=xskte44y2wfqin464ayecyc09nikcj";
 
             var sheej = new WebClient().DownloadString(sheeu);
 
@@ -2261,6 +2420,38 @@ namespace TFRPStreambox_CSharpWFA
             else
             {
                 LiveCheck.sheepdoglive = "false";
+            }
+            //SAffypie101 Live check
+            string saffyu = @"https://api.twitch.tv/kraken/streams/saffypie101?client_id=xskte44y2wfqin464ayecyc09nikcj";
+
+            var saffyj = new WebClient().DownloadString(saffyu);
+
+            Rootobject saffyr = JsonConvert.DeserializeObject<Rootobject>(saffyj);
+            refreshBackgroundWorker.ReportProgress(bar++);
+            //Console.WriteLine(zaqr.stream);
+            if (saffyr.stream != null && saffyr.stream.game == "Grand Theft Auto V")
+            {
+                LiveCheck.saffylive = "true";
+            }
+            else
+            {
+                LiveCheck.saffylive = "false";
+            }
+            //mythematic Live check
+            string mythu = @"https://api.twitch.tv/kraken/streams/mythematic?client_id=xskte44y2wfqin464ayecyc09nikcj";
+
+            var mythj = new WebClient().DownloadString(mythu);
+
+            Rootobject mythr = JsonConvert.DeserializeObject<Rootobject>(mythj);
+            refreshBackgroundWorker.ReportProgress(bar++);
+            //Console.WriteLine(zaqr.stream);
+            if (mythr.stream != null && mythr.stream.game == "Grand Theft Auto V")
+            {
+                LiveCheck.mythematiclive = "true";
+            }
+            else
+            {
+                LiveCheck.mythematiclive = "false";
             }
 
             //Start of the button updates
@@ -3453,14 +3644,38 @@ namespace TFRPStreambox_CSharpWFA
             {
                 TheRealSpectral.BackColor = Color.IndianRed;
             }
+            //Mythematic Live check
+            //Console.WriteLine(zaqr.stream);
+            string myths = LiveCheck.mythematiclive;
+            if (myths == str2)
+            {
+                Mythematic.BackColor = Color.LightGreen;
+                ++i;
+            }
+            else
+            {
+                Mythematic.BackColor = Color.IndianRed;
+            }
+            //Saffypie101 Live check
+            //Console.WriteLine(zaqr.stream);
+            string saffys = LiveCheck.saffylive;
+            if (saffys == str2)
+            {
+                SaffyPie101.BackColor = Color.LightGreen;
+                ++i;
+            }
+            else
+            {
+                SaffyPie101.BackColor = Color.IndianRed;
+            }
 
             Form1.streamercount = i.ToString();
         }
 
         public void refreshBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            refreshProgress.Value = e.ProgressPercentage;
-            refreshProgress.Update();
+            bunifuCircleProgressbar1.Value = e.ProgressPercentage;
+            bunifuCircleProgressbar1.Update();
         }
 
         public async void refreshBackgroundWorker_Complete(object sender, RunWorkerCompletedEventArgs e)
@@ -3473,6 +3688,36 @@ namespace TFRPStreambox_CSharpWFA
             refreshButton.BackColor = Color.White;
             refreshButton.Text = "Refresh";
             refreshButton.Enabled = true;
+        }
+
+        private void vlcbutton_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.videolan.org/vlc/index.html");
+        }
+
+        private void Mythematic_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/mythematic best");
+        }
+
+        private void SaffyPie101_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("CMD", "/C data\\streamlink.exe http://twitch.tv/saffypie101 best");
+        }
+
+        private void bunifuProgressBar1_progressChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuCircleProgressbar1_Click(object sender, EventArgs e)
+        {
+            refreshBackgroundWorker.RunWorkerAsync();
         }
     }
 

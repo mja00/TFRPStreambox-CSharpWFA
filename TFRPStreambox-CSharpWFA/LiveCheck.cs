@@ -110,6 +110,8 @@ namespace TFRPStreambox_CSharpWFA
         public static string zaquellelive;
         public static string sheepdoglive;
         public static string thereallive;
+        public static string mythematiclive;
+        public static string saffylive;
 
         public static void refreshMethod()
         {

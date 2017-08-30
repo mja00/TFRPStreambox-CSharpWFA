@@ -172,8 +172,8 @@
             this.button58 = new System.Windows.Forms.Button();
             this.button59 = new System.Windows.Forms.Button();
             this.button60 = new System.Windows.Forms.Button();
-            this.button61 = new System.Windows.Forms.Button();
-            this.button62 = new System.Windows.Forms.Button();
+            this.SaffyPie101 = new System.Windows.Forms.Button();
+            this.Mythematic = new System.Windows.Forms.Button();
             this.TheRealSpectral = new System.Windows.Forms.Button();
             this.SheepDog59 = new System.Windows.Forms.Button();
             this.Zaquelle = new System.Windows.Forms.Button();
@@ -194,12 +194,12 @@
             this.TastyTV = new System.Windows.Forms.Button();
             this.Ssaab = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.refreshProgress = new System.Windows.Forms.ProgressBar();
             this.vlcbutton = new System.Windows.Forms.Button();
             this._1GUnit1ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.refreshButton = new System.Windows.Forms.Button();
             this.refreshBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.StreamerCount = new System.Windows.Forms.Label();
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1247,8 +1247,8 @@
             this.tabPage2.Controls.Add(this.button58);
             this.tabPage2.Controls.Add(this.button59);
             this.tabPage2.Controls.Add(this.button60);
-            this.tabPage2.Controls.Add(this.button61);
-            this.tabPage2.Controls.Add(this.button62);
+            this.tabPage2.Controls.Add(this.SaffyPie101);
+            this.tabPage2.Controls.Add(this.Mythematic);
             this.tabPage2.Controls.Add(this.TheRealSpectral);
             this.tabPage2.Controls.Add(this.SheepDog59);
             this.tabPage2.Controls.Add(this.Zaquelle);
@@ -1925,27 +1925,27 @@
             this.button60.Text = "N/A";
             this.button60.UseVisualStyleBackColor = false;
             // 
-            // button61
+            // SaffyPie101
             // 
-            this.button61.BackColor = System.Drawing.Color.White;
-            this.button61.Enabled = false;
-            this.button61.Location = new System.Drawing.Point(411, 98);
-            this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(90, 35);
-            this.button61.TabIndex = 100;
-            this.button61.Text = "N/A";
-            this.button61.UseVisualStyleBackColor = false;
+            this.SaffyPie101.BackColor = System.Drawing.Color.IndianRed;
+            this.SaffyPie101.Location = new System.Drawing.Point(411, 98);
+            this.SaffyPie101.Name = "SaffyPie101";
+            this.SaffyPie101.Size = new System.Drawing.Size(90, 35);
+            this.SaffyPie101.TabIndex = 100;
+            this.SaffyPie101.Text = "SaffyPie101";
+            this.SaffyPie101.UseVisualStyleBackColor = false;
+            this.SaffyPie101.Click += new System.EventHandler(this.SaffyPie101_Click);
             // 
-            // button62
+            // Mythematic
             // 
-            this.button62.BackColor = System.Drawing.Color.White;
-            this.button62.Enabled = false;
-            this.button62.Location = new System.Drawing.Point(315, 98);
-            this.button62.Name = "button62";
-            this.button62.Size = new System.Drawing.Size(90, 35);
-            this.button62.TabIndex = 99;
-            this.button62.Text = "N/A";
-            this.button62.UseVisualStyleBackColor = false;
+            this.Mythematic.BackColor = System.Drawing.Color.IndianRed;
+            this.Mythematic.Location = new System.Drawing.Point(315, 98);
+            this.Mythematic.Name = "Mythematic";
+            this.Mythematic.Size = new System.Drawing.Size(90, 35);
+            this.Mythematic.TabIndex = 99;
+            this.Mythematic.Text = "Mythematic";
+            this.Mythematic.UseVisualStyleBackColor = false;
+            this.Mythematic.Click += new System.EventHandler(this.Mythematic_Click);
             // 
             // TheRealSpectral
             // 
@@ -2143,6 +2143,8 @@
             this.TastyTV.Size = new System.Drawing.Size(90, 35);
             this.TastyTV.TabIndex = 81;
             this.TastyTV.Text = "TastyTV";
+            this._1GUnit1ToolTip.SetToolTip(this.TastyTV, "Characters: \r\nBobby Irvine\r\nHarold Wilson\r\nNorman Wilson\r\nPatrick Flanegan\r\nWilli" +
+        "am Parker");
             this.TastyTV.UseVisualStyleBackColor = false;
             this.TastyTV.Click += new System.EventHandler(this.TastyTV_Click);
             // 
@@ -2168,14 +2170,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "The FamilyRP streambox. For all your action packed stream watching!";
             // 
-            // refreshProgress
-            // 
-            this.refreshProgress.Location = new System.Drawing.Point(5, 12);
-            this.refreshProgress.Maximum = 99;
-            this.refreshProgress.Name = "refreshProgress";
-            this.refreshProgress.Size = new System.Drawing.Size(146, 10);
-            this.refreshProgress.TabIndex = 2;
-            // 
             // vlcbutton
             // 
             this.vlcbutton.Location = new System.Drawing.Point(737, 9);
@@ -2184,6 +2178,7 @@
             this.vlcbutton.TabIndex = 3;
             this.vlcbutton.Text = "VLC Player";
             this.vlcbutton.UseVisualStyleBackColor = true;
+            this.vlcbutton.Click += new System.EventHandler(this.vlcbutton_Click);
             // 
             // _1GUnit1ToolTip
             // 
@@ -2193,9 +2188,9 @@
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(368, 507);
+            this.refreshButton.Location = new System.Drawing.Point(366, 516);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(87, 52);
+            this.refreshButton.Size = new System.Drawing.Size(90, 49);
             this.refreshButton.TabIndex = 4;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
@@ -2219,24 +2214,48 @@
             this.StreamerCount.TabIndex = 5;
             this.StreamerCount.Text = "Streamers Online: 0";
             // 
+            // bunifuCircleProgressbar1
+            // 
+            this.bunifuCircleProgressbar1.animated = true;
+            this.bunifuCircleProgressbar1.animationIterval = 5;
+            this.bunifuCircleProgressbar1.animationSpeed = 1;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuCircleProgressbar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCircleProgressbar1.LabelVisible = false;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(292, 504);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCircleProgressbar1.MaxValue = 101;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.IndianRed;
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(73, 73);
+            this.bunifuCircleProgressbar1.TabIndex = 8;
+            this._1GUnit1ToolTip.SetToolTip(this.bunifuCircleProgressbar1, "Click me to refresh");
+            this.bunifuCircleProgressbar1.Value = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(824, 583);
+            this.Controls.Add(this.bunifuCircleProgressbar1);
             this.Controls.Add(this.StreamerCount);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.vlcbutton);
-            this.Controls.Add(this.refreshProgress);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "The FamilyRP Streambox v1.2.0.0";
+            this.Text = "The FamilyRP Streambox v1.3.1.0";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -2252,7 +2271,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button _1GUnit1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar refreshProgress;
         private System.Windows.Forms.Button vlcbutton;
         private System.Windows.Forms.Button SomeTexas_Dude;
         private System.Windows.Forms.Button SkipGently;
@@ -2393,8 +2411,8 @@
         private System.Windows.Forms.Button button58;
         private System.Windows.Forms.Button button59;
         private System.Windows.Forms.Button button60;
-        private System.Windows.Forms.Button button61;
-        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button SaffyPie101;
+        private System.Windows.Forms.Button Mythematic;
         private System.Windows.Forms.Button TheRealSpectral;
         private System.Windows.Forms.Button SheepDog59;
         private System.Windows.Forms.Button Zaquelle;
@@ -2417,6 +2435,7 @@
         private System.Windows.Forms.Button refreshButton;
         private System.ComponentModel.BackgroundWorker refreshBackgroundWorker;
         private System.Windows.Forms.Label StreamerCount;
+        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
     }
 }
 
