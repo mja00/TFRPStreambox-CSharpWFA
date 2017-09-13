@@ -55,7 +55,7 @@
       <HintPath>..\packages\Autoupdater.NET.Official.1.4.3\lib\net452\AutoUpdater.NET.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Downloads - Data Drive\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -94,6 +94,18 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="LiveCheck.cs" />
+    <Compile Include="OAuthPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OAuthPrompt.Designer.cs">
+      <DependentUpon>OAuthPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsBox.Designer.cs">
+      <DependentUpon>OptionsBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OAuthPrompt.resx">
+      <DependentUpon>OAuthPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsBox.resx">
+      <DependentUpon>OptionsBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -169,9 +169,9 @@
             this.button55 = new System.Windows.Forms.Button();
             this.button56 = new System.Windows.Forms.Button();
             this.button57 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
-            this.button59 = new System.Windows.Forms.Button();
-            this.button60 = new System.Windows.Forms.Button();
+            this.Zehring = new System.Windows.Forms.Button();
+            this.peebro = new System.Windows.Forms.Button();
+            this.SlaughterCo = new System.Windows.Forms.Button();
             this.SaffyPie101 = new System.Windows.Forms.Button();
             this.Mythematic = new System.Windows.Forms.Button();
             this.TheRealSpectral = new System.Windows.Forms.Button();
@@ -196,10 +196,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.vlcbutton = new System.Windows.Forms.Button();
             this._1GUnit1ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.refreshButton = new System.Windows.Forms.Button();
             this.refreshBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.StreamerCount = new System.Windows.Forms.Label();
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.helpButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -209,14 +212,17 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 38);
+            this.tabControl1.Location = new System.Drawing.Point(-4, 38);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(825, 463);
+            this.tabControl1.Size = new System.Drawing.Size(835, 463);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage1.Controls.Add(this.SomeTexas_Dude);
             this.tabPage1.Controls.Add(this.SkipGently);
             this.tabPage1.Controls.Add(this.SirPinkleton00);
@@ -300,13 +306,13 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(817, 437);
+            this.tabPage1.Size = new System.Drawing.Size(827, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Page 1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // SomeTexas_Dude
             // 
+            this.SomeTexas_Dude.AutoSize = true;
             this.SomeTexas_Dude.BackColor = System.Drawing.Color.IndianRed;
             this.SomeTexas_Dude.Location = new System.Drawing.Point(697, 382);
             this.SomeTexas_Dude.Name = "SomeTexas_Dude";
@@ -318,6 +324,7 @@
             // 
             // SkipGently
             // 
+            this.SkipGently.AutoSize = true;
             this.SkipGently.BackColor = System.Drawing.Color.IndianRed;
             this.SkipGently.Location = new System.Drawing.Point(601, 382);
             this.SkipGently.Name = "SkipGently";
@@ -329,6 +336,7 @@
             // 
             // SirPinkleton00
             // 
+            this.SirPinkleton00.AutoSize = true;
             this.SirPinkleton00.BackColor = System.Drawing.Color.IndianRed;
             this.SirPinkleton00.Location = new System.Drawing.Point(505, 382);
             this.SirPinkleton00.Name = "SirPinkleton00";
@@ -340,6 +348,7 @@
             // 
             // SirCoffeestain
             // 
+            this.SirCoffeestain.AutoSize = true;
             this.SirCoffeestain.BackColor = System.Drawing.Color.IndianRed;
             this.SirCoffeestain.Location = new System.Drawing.Point(409, 382);
             this.SirCoffeestain.Name = "SirCoffeestain";
@@ -351,6 +360,7 @@
             // 
             // SimplyJulian
             // 
+            this.SimplyJulian.AutoSize = true;
             this.SimplyJulian.BackColor = System.Drawing.Color.IndianRed;
             this.SimplyJulian.Location = new System.Drawing.Point(313, 382);
             this.SimplyJulian.Name = "SimplyJulian";
@@ -362,6 +372,7 @@
             // 
             // SilentSentry
             // 
+            this.SilentSentry.AutoSize = true;
             this.SilentSentry.BackColor = System.Drawing.Color.IndianRed;
             this.SilentSentry.Location = new System.Drawing.Point(217, 382);
             this.SilentSentry.Name = "SilentSentry";
@@ -373,6 +384,7 @@
             // 
             // SHPTV
             // 
+            this.SHPTV.AutoSize = true;
             this.SHPTV.BackColor = System.Drawing.Color.IndianRed;
             this.SHPTV.Location = new System.Drawing.Point(121, 382);
             this.SHPTV.Name = "SHPTV";
@@ -384,6 +396,7 @@
             // 
             // SheriffEli
             // 
+            this.SheriffEli.AutoSize = true;
             this.SheriffEli.BackColor = System.Drawing.Color.IndianRed;
             this.SheriffEli.Location = new System.Drawing.Point(25, 382);
             this.SheriffEli.Name = "SheriffEli";
@@ -395,6 +408,7 @@
             // 
             // ShaZ
             // 
+            this.ShaZ.AutoSize = true;
             this.ShaZ.BackColor = System.Drawing.Color.IndianRed;
             this.ShaZ.Location = new System.Drawing.Point(697, 341);
             this.ShaZ.Name = "ShaZ";
@@ -406,6 +420,7 @@
             // 
             // Selvek
             // 
+            this.Selvek.AutoSize = true;
             this.Selvek.BackColor = System.Drawing.Color.IndianRed;
             this.Selvek.Location = new System.Drawing.Point(601, 341);
             this.Selvek.Name = "Selvek";
@@ -417,6 +432,7 @@
             // 
             // SeanKingV
             // 
+            this.SeanKingV.AutoSize = true;
             this.SeanKingV.BackColor = System.Drawing.Color.IndianRed;
             this.SeanKingV.Location = new System.Drawing.Point(505, 341);
             this.SeanKingV.Name = "SeanKingV";
@@ -428,6 +444,7 @@
             // 
             // SayeedBlack
             // 
+            this.SayeedBlack.AutoSize = true;
             this.SayeedBlack.BackColor = System.Drawing.Color.IndianRed;
             this.SayeedBlack.Location = new System.Drawing.Point(409, 341);
             this.SayeedBlack.Name = "SayeedBlack";
@@ -439,6 +456,7 @@
             // 
             // Sarapocalypse
             // 
+            this.Sarapocalypse.AutoSize = true;
             this.Sarapocalypse.BackColor = System.Drawing.Color.IndianRed;
             this.Sarapocalypse.Location = new System.Drawing.Point(313, 341);
             this.Sarapocalypse.Name = "Sarapocalypse";
@@ -450,6 +468,7 @@
             // 
             // SAMZHIT
             // 
+            this.SAMZHIT.AutoSize = true;
             this.SAMZHIT.BackColor = System.Drawing.Color.IndianRed;
             this.SAMZHIT.Location = new System.Drawing.Point(217, 341);
             this.SAMZHIT.Name = "SAMZHIT";
@@ -461,6 +480,7 @@
             // 
             // RastaRafikii
             // 
+            this.RastaRafikii.AutoSize = true;
             this.RastaRafikii.BackColor = System.Drawing.Color.IndianRed;
             this.RastaRafikii.Location = new System.Drawing.Point(121, 341);
             this.RastaRafikii.Name = "RastaRafikii";
@@ -472,6 +492,7 @@
             // 
             // Rastafied
             // 
+            this.Rastafied.AutoSize = true;
             this.Rastafied.BackColor = System.Drawing.Color.IndianRed;
             this.Rastafied.Location = new System.Drawing.Point(25, 341);
             this.Rastafied.Name = "Rastafied";
@@ -483,6 +504,7 @@
             // 
             // RajjPatel
             // 
+            this.RajjPatel.AutoSize = true;
             this.RajjPatel.BackColor = System.Drawing.Color.IndianRed;
             this.RajjPatel.Location = new System.Drawing.Point(697, 300);
             this.RajjPatel.Name = "RajjPatel";
@@ -494,6 +516,7 @@
             // 
             // Pydrex
             // 
+            this.Pydrex.AutoSize = true;
             this.Pydrex.BackColor = System.Drawing.Color.IndianRed;
             this.Pydrex.Location = new System.Drawing.Point(601, 300);
             this.Pydrex.Name = "Pydrex";
@@ -505,6 +528,7 @@
             // 
             // Purrluna
             // 
+            this.Purrluna.AutoSize = true;
             this.Purrluna.BackColor = System.Drawing.Color.IndianRed;
             this.Purrluna.Location = new System.Drawing.Point(505, 300);
             this.Purrluna.Name = "Purrluna";
@@ -516,6 +540,7 @@
             // 
             // PrimusPalus
             // 
+            this.PrimusPalus.AutoSize = true;
             this.PrimusPalus.BackColor = System.Drawing.Color.IndianRed;
             this.PrimusPalus.Location = new System.Drawing.Point(409, 300);
             this.PrimusPalus.Name = "PrimusPalus";
@@ -527,10 +552,11 @@
             // 
             // PorkMarshmallow
             // 
+            this.PorkMarshmallow.AutoSize = true;
             this.PorkMarshmallow.BackColor = System.Drawing.Color.IndianRed;
             this.PorkMarshmallow.Location = new System.Drawing.Point(313, 300);
             this.PorkMarshmallow.Name = "PorkMarshmallow";
-            this.PorkMarshmallow.Size = new System.Drawing.Size(90, 35);
+            this.PorkMarshmallow.Size = new System.Drawing.Size(92, 35);
             this.PorkMarshmallow.TabIndex = 59;
             this.PorkMarshmallow.Text = "PorkMarshmallo";
             this.PorkMarshmallow.UseVisualStyleBackColor = false;
@@ -538,6 +564,7 @@
             // 
             // PmsProxy
             // 
+            this.PmsProxy.AutoSize = true;
             this.PmsProxy.BackColor = System.Drawing.Color.IndianRed;
             this.PmsProxy.Location = new System.Drawing.Point(217, 300);
             this.PmsProxy.Name = "PmsProxy";
@@ -549,6 +576,7 @@
             // 
             // Pinky
             // 
+            this.Pinky.AutoSize = true;
             this.Pinky.BackColor = System.Drawing.Color.IndianRed;
             this.Pinky.Location = new System.Drawing.Point(121, 300);
             this.Pinky.Name = "Pinky";
@@ -560,6 +588,7 @@
             // 
             // PENTAhearth
             // 
+            this.PENTAhearth.AutoSize = true;
             this.PENTAhearth.BackColor = System.Drawing.Color.IndianRed;
             this.PENTAhearth.Location = new System.Drawing.Point(25, 300);
             this.PENTAhearth.Name = "PENTAhearth";
@@ -571,6 +600,7 @@
             // 
             // Og_BluePill
             // 
+            this.Og_BluePill.AutoSize = true;
             this.Og_BluePill.BackColor = System.Drawing.Color.IndianRed;
             this.Og_BluePill.Location = new System.Drawing.Point(697, 259);
             this.Og_BluePill.Name = "Og_BluePill";
@@ -582,10 +612,11 @@
             // 
             // MsDeathRabbit
             // 
+            this.MsDeathRabbit.AutoSize = true;
             this.MsDeathRabbit.BackColor = System.Drawing.Color.IndianRed;
             this.MsDeathRabbit.Location = new System.Drawing.Point(601, 259);
             this.MsDeathRabbit.Name = "MsDeathRabbit";
-            this.MsDeathRabbit.Size = new System.Drawing.Size(90, 35);
+            this.MsDeathRabbit.Size = new System.Drawing.Size(91, 35);
             this.MsDeathRabbit.TabIndex = 54;
             this.MsDeathRabbit.Text = "MsDeathRabbit";
             this.MsDeathRabbit.UseVisualStyleBackColor = false;
@@ -593,10 +624,11 @@
             // 
             // MrMoonsHouse
             // 
+            this.MrMoonsHouse.AutoSize = true;
             this.MrMoonsHouse.BackColor = System.Drawing.Color.IndianRed;
             this.MrMoonsHouse.Location = new System.Drawing.Point(505, 259);
             this.MrMoonsHouse.Name = "MrMoonsHouse";
-            this.MrMoonsHouse.Size = new System.Drawing.Size(90, 35);
+            this.MrMoonsHouse.Size = new System.Drawing.Size(92, 35);
             this.MrMoonsHouse.TabIndex = 53;
             this.MrMoonsHouse.Text = "MrMoonsHouse";
             this.MrMoonsHouse.UseVisualStyleBackColor = false;
@@ -604,6 +636,7 @@
             // 
             // MintsTV
             // 
+            this.MintsTV.AutoSize = true;
             this.MintsTV.BackColor = System.Drawing.Color.IndianRed;
             this.MintsTV.Location = new System.Drawing.Point(409, 259);
             this.MintsTV.Name = "MintsTV";
@@ -615,6 +648,7 @@
             // 
             // MiltonTPike1
             // 
+            this.MiltonTPike1.AutoSize = true;
             this.MiltonTPike1.BackColor = System.Drawing.Color.IndianRed;
             this.MiltonTPike1.Location = new System.Drawing.Point(313, 259);
             this.MiltonTPike1.Name = "MiltonTPike1";
@@ -626,6 +660,7 @@
             // 
             // mart1n_g
             // 
+            this.mart1n_g.AutoSize = true;
             this.mart1n_g.BackColor = System.Drawing.Color.IndianRed;
             this.mart1n_g.Location = new System.Drawing.Point(217, 259);
             this.mart1n_g.Name = "mart1n_g";
@@ -637,6 +672,7 @@
             // 
             // loveANF3L
             // 
+            this.loveANF3L.AutoSize = true;
             this.loveANF3L.BackColor = System.Drawing.Color.IndianRed;
             this.loveANF3L.Location = new System.Drawing.Point(121, 259);
             this.loveANF3L.Name = "loveANF3L";
@@ -648,6 +684,7 @@
             // 
             // LiftYourGame
             // 
+            this.LiftYourGame.AutoSize = true;
             this.LiftYourGame.BackColor = System.Drawing.Color.IndianRed;
             this.LiftYourGame.Location = new System.Drawing.Point(25, 259);
             this.LiftYourGame.Name = "LiftYourGame";
@@ -659,6 +696,7 @@
             // 
             // lawdog1096
             // 
+            this.lawdog1096.AutoSize = true;
             this.lawdog1096.BackColor = System.Drawing.Color.IndianRed;
             this.lawdog1096.Location = new System.Drawing.Point(697, 218);
             this.lawdog1096.Name = "lawdog1096";
@@ -670,6 +708,7 @@
             // 
             // LarryX7
             // 
+            this.LarryX7.AutoSize = true;
             this.LarryX7.BackColor = System.Drawing.Color.IndianRed;
             this.LarryX7.Location = new System.Drawing.Point(601, 218);
             this.LarryX7.Name = "LarryX7";
@@ -681,6 +720,7 @@
             // 
             // Kithicor27
             // 
+            this.Kithicor27.AutoSize = true;
             this.Kithicor27.BackColor = System.Drawing.Color.IndianRed;
             this.Kithicor27.Location = new System.Drawing.Point(505, 218);
             this.Kithicor27.Name = "Kithicor27";
@@ -692,6 +732,7 @@
             // 
             // KatieRouu
             // 
+            this.KatieRouu.AutoSize = true;
             this.KatieRouu.BackColor = System.Drawing.Color.IndianRed;
             this.KatieRouu.Location = new System.Drawing.Point(409, 218);
             this.KatieRouu.Name = "KatieRouu";
@@ -703,6 +744,7 @@
             // 
             // KaptainKpress
             // 
+            this.KaptainKpress.AutoSize = true;
             this.KaptainKpress.BackColor = System.Drawing.Color.IndianRed;
             this.KaptainKpress.Location = new System.Drawing.Point(313, 218);
             this.KaptainKpress.Name = "KaptainKpress";
@@ -714,6 +756,7 @@
             // 
             // kaceytron
             // 
+            this.kaceytron.AutoSize = true;
             this.kaceytron.BackColor = System.Drawing.Color.IndianRed;
             this.kaceytron.Location = new System.Drawing.Point(217, 218);
             this.kaceytron.Name = "kaceytron";
@@ -725,6 +768,7 @@
             // 
             // JTtroy
             // 
+            this.JTtroy.AutoSize = true;
             this.JTtroy.BackColor = System.Drawing.Color.IndianRed;
             this.JTtroy.Location = new System.Drawing.Point(121, 218);
             this.JTtroy.Name = "JTtroy";
@@ -736,6 +780,7 @@
             // 
             // Jolly__Jess
             // 
+            this.Jolly__Jess.AutoSize = true;
             this.Jolly__Jess.BackColor = System.Drawing.Color.IndianRed;
             this.Jolly__Jess.Location = new System.Drawing.Point(25, 218);
             this.Jolly__Jess.Name = "Jolly__Jess";
@@ -747,6 +792,7 @@
             // 
             // John782
             // 
+            this.John782.AutoSize = true;
             this.John782.BackColor = System.Drawing.Color.IndianRed;
             this.John782.Location = new System.Drawing.Point(697, 177);
             this.John782.Name = "John782";
@@ -758,6 +804,7 @@
             // 
             // JmxTwiztid
             // 
+            this.JmxTwiztid.AutoSize = true;
             this.JmxTwiztid.BackColor = System.Drawing.Color.IndianRed;
             this.JmxTwiztid.Location = new System.Drawing.Point(601, 177);
             this.JmxTwiztid.Name = "JmxTwiztid";
@@ -769,6 +816,7 @@
             // 
             // jake_terek
             // 
+            this.jake_terek.AutoSize = true;
             this.jake_terek.BackColor = System.Drawing.Color.IndianRed;
             this.jake_terek.Location = new System.Drawing.Point(505, 177);
             this.jake_terek.Name = "jake_terek";
@@ -780,6 +828,7 @@
             // 
             // JaboodyShow
             // 
+            this.JaboodyShow.AutoSize = true;
             this.JaboodyShow.BackColor = System.Drawing.Color.IndianRed;
             this.JaboodyShow.Location = new System.Drawing.Point(409, 177);
             this.JaboodyShow.Name = "JaboodyShow";
@@ -791,6 +840,7 @@
             // 
             // J_Reed
             // 
+            this.J_Reed.AutoSize = true;
             this.J_Reed.BackColor = System.Drawing.Color.IndianRed;
             this.J_Reed.Location = new System.Drawing.Point(313, 177);
             this.J_Reed.Name = "J_Reed";
@@ -802,6 +852,7 @@
             // 
             // itzButch
             // 
+            this.itzButch.AutoSize = true;
             this.itzButch.BackColor = System.Drawing.Color.IndianRed;
             this.itzButch.Location = new System.Drawing.Point(217, 177);
             this.itzButch.Name = "itzButch";
@@ -813,6 +864,7 @@
             // 
             // ironmonkeytv
             // 
+            this.ironmonkeytv.AutoSize = true;
             this.ironmonkeytv.BackColor = System.Drawing.Color.IndianRed;
             this.ironmonkeytv.Location = new System.Drawing.Point(121, 177);
             this.ironmonkeytv.Name = "ironmonkeytv";
@@ -824,6 +876,7 @@
             // 
             // ImmortalLive
             // 
+            this.ImmortalLive.AutoSize = true;
             this.ImmortalLive.BackColor = System.Drawing.Color.IndianRed;
             this.ImmortalLive.Location = new System.Drawing.Point(25, 177);
             this.ImmortalLive.Name = "ImmortalLive";
@@ -835,6 +888,7 @@
             // 
             // IAmSp00n
             // 
+            this.IAmSp00n.AutoSize = true;
             this.IAmSp00n.BackColor = System.Drawing.Color.IndianRed;
             this.IAmSp00n.Location = new System.Drawing.Point(697, 136);
             this.IAmSp00n.Name = "IAmSp00n";
@@ -846,6 +900,7 @@
             // 
             // Hirona
             // 
+            this.Hirona.AutoSize = true;
             this.Hirona.BackColor = System.Drawing.Color.IndianRed;
             this.Hirona.Location = new System.Drawing.Point(601, 136);
             this.Hirona.Name = "Hirona";
@@ -857,6 +912,7 @@
             // 
             // Hazard
             // 
+            this.Hazard.AutoSize = true;
             this.Hazard.BackColor = System.Drawing.Color.IndianRed;
             this.Hazard.Location = new System.Drawing.Point(505, 136);
             this.Hazard.Name = "Hazard";
@@ -868,6 +924,7 @@
             // 
             // Harryow
             // 
+            this.Harryow.AutoSize = true;
             this.Harryow.BackColor = System.Drawing.Color.IndianRed;
             this.Harryow.Location = new System.Drawing.Point(409, 136);
             this.Harryow.Name = "Harryow";
@@ -879,6 +936,7 @@
             // 
             // GloryD
             // 
+            this.GloryD.AutoSize = true;
             this.GloryD.BackColor = System.Drawing.Color.IndianRed;
             this.GloryD.Location = new System.Drawing.Point(313, 136);
             this.GloryD.Name = "GloryD";
@@ -890,6 +948,7 @@
             // 
             // GiantFaffle
             // 
+            this.GiantFaffle.AutoSize = true;
             this.GiantFaffle.BackColor = System.Drawing.Color.IndianRed;
             this.GiantFaffle.Location = new System.Drawing.Point(217, 136);
             this.GiantFaffle.Name = "GiantFaffle";
@@ -901,6 +960,7 @@
             // 
             // GhilleGuyTV
             // 
+            this.GhilleGuyTV.AutoSize = true;
             this.GhilleGuyTV.BackColor = System.Drawing.Color.IndianRed;
             this.GhilleGuyTV.Location = new System.Drawing.Point(121, 136);
             this.GhilleGuyTV.Name = "GhilleGuyTV";
@@ -912,6 +972,7 @@
             // 
             // GeeFamous92
             // 
+            this.GeeFamous92.AutoSize = true;
             this.GeeFamous92.BackColor = System.Drawing.Color.IndianRed;
             this.GeeFamous92.Location = new System.Drawing.Point(25, 136);
             this.GeeFamous92.Name = "GeeFamous92";
@@ -923,6 +984,7 @@
             // 
             // Five0AnthO
             // 
+            this.Five0AnthO.AutoSize = true;
             this.Five0AnthO.BackColor = System.Drawing.Color.IndianRed;
             this.Five0AnthO.Location = new System.Drawing.Point(697, 95);
             this.Five0AnthO.Name = "Five0AnthO";
@@ -934,10 +996,11 @@
             // 
             // FistofTheWalrus
             // 
+            this.FistofTheWalrus.AutoSize = true;
             this.FistofTheWalrus.BackColor = System.Drawing.Color.IndianRed;
             this.FistofTheWalrus.Location = new System.Drawing.Point(601, 95);
             this.FistofTheWalrus.Name = "FistofTheWalrus";
-            this.FistofTheWalrus.Size = new System.Drawing.Size(90, 35);
+            this.FistofTheWalrus.Size = new System.Drawing.Size(91, 35);
             this.FistofTheWalrus.TabIndex = 22;
             this.FistofTheWalrus.Text = "FistOfTheWalru";
             this.FistofTheWalrus.UseVisualStyleBackColor = false;
@@ -945,6 +1008,7 @@
             // 
             // Finkone
             // 
+            this.Finkone.AutoSize = true;
             this.Finkone.BackColor = System.Drawing.Color.IndianRed;
             this.Finkone.Location = new System.Drawing.Point(505, 95);
             this.Finkone.Name = "Finkone";
@@ -956,6 +1020,7 @@
             // 
             // Esoluu
             // 
+            this.Esoluu.AutoSize = true;
             this.Esoluu.BackColor = System.Drawing.Color.IndianRed;
             this.Esoluu.Location = new System.Drawing.Point(409, 95);
             this.Esoluu.Name = "Esoluu";
@@ -967,6 +1032,7 @@
             // 
             // DrunkBabyYoshi
             // 
+            this.DrunkBabyYoshi.AutoSize = true;
             this.DrunkBabyYoshi.BackColor = System.Drawing.Color.IndianRed;
             this.DrunkBabyYoshi.Location = new System.Drawing.Point(313, 95);
             this.DrunkBabyYoshi.Name = "DrunkBabyYoshi";
@@ -978,6 +1044,7 @@
             // 
             // djkwix
             // 
+            this.djkwix.AutoSize = true;
             this.djkwix.BackColor = System.Drawing.Color.IndianRed;
             this.djkwix.Location = new System.Drawing.Point(217, 95);
             this.djkwix.Name = "djkwix";
@@ -989,6 +1056,7 @@
             // 
             // DisbeArex
             // 
+            this.DisbeArex.AutoSize = true;
             this.DisbeArex.BackColor = System.Drawing.Color.IndianRed;
             this.DisbeArex.Location = new System.Drawing.Point(121, 95);
             this.DisbeArex.Name = "DisbeArex";
@@ -1000,6 +1068,7 @@
             // 
             // dasMehdi
             // 
+            this.dasMehdi.AutoSize = true;
             this.dasMehdi.BackColor = System.Drawing.Color.IndianRed;
             this.dasMehdi.Location = new System.Drawing.Point(25, 95);
             this.dasMehdi.Name = "dasMehdi";
@@ -1011,6 +1080,7 @@
             // 
             // CoolidgeHD
             // 
+            this.CoolidgeHD.AutoSize = true;
             this.CoolidgeHD.BackColor = System.Drawing.Color.IndianRed;
             this.CoolidgeHD.Location = new System.Drawing.Point(697, 54);
             this.CoolidgeHD.Name = "CoolidgeHD";
@@ -1022,6 +1092,7 @@
             // 
             // CletusBueford
             // 
+            this.CletusBueford.AutoSize = true;
             this.CletusBueford.BackColor = System.Drawing.Color.IndianRed;
             this.CletusBueford.Location = new System.Drawing.Point(601, 54);
             this.CletusBueford.Name = "CletusBueford";
@@ -1033,6 +1104,7 @@
             // 
             // ClassyPax
             // 
+            this.ClassyPax.AutoSize = true;
             this.ClassyPax.BackColor = System.Drawing.Color.IndianRed;
             this.ClassyPax.Location = new System.Drawing.Point(505, 54);
             this.ClassyPax.Name = "ClassyPax";
@@ -1044,6 +1116,7 @@
             // 
             // ChiefDas
             // 
+            this.ChiefDas.AutoSize = true;
             this.ChiefDas.BackColor = System.Drawing.Color.IndianRed;
             this.ChiefDas.Location = new System.Drawing.Point(409, 54);
             this.ChiefDas.Name = "ChiefDas";
@@ -1055,6 +1128,7 @@
             // 
             // Ch1ckenb0ne
             // 
+            this.Ch1ckenb0ne.AutoSize = true;
             this.Ch1ckenb0ne.BackColor = System.Drawing.Color.IndianRed;
             this.Ch1ckenb0ne.Location = new System.Drawing.Point(313, 54);
             this.Ch1ckenb0ne.Name = "Ch1ckenb0ne";
@@ -1066,6 +1140,7 @@
             // 
             // BurkeBlack
             // 
+            this.BurkeBlack.AutoSize = true;
             this.BurkeBlack.BackColor = System.Drawing.Color.IndianRed;
             this.BurkeBlack.Location = new System.Drawing.Point(217, 54);
             this.BurkeBlack.Name = "BurkeBlack";
@@ -1077,6 +1152,7 @@
             // 
             // BuckkNaked
             // 
+            this.BuckkNaked.AutoSize = true;
             this.BuckkNaked.BackColor = System.Drawing.Color.IndianRed;
             this.BuckkNaked.Location = new System.Drawing.Point(121, 54);
             this.BuckkNaked.Name = "BuckkNaked";
@@ -1088,6 +1164,7 @@
             // 
             // BPZ
             // 
+            this.BPZ.AutoSize = true;
             this.BPZ.BackColor = System.Drawing.Color.IndianRed;
             this.BPZ.Location = new System.Drawing.Point(25, 54);
             this.BPZ.Name = "BPZ";
@@ -1099,95 +1176,112 @@
             // 
             // boscoreli_gaming
             // 
+            this.boscoreli_gaming.AutoSize = true;
             this.boscoreli_gaming.BackColor = System.Drawing.Color.IndianRed;
             this.boscoreli_gaming.Location = new System.Drawing.Point(697, 13);
             this.boscoreli_gaming.Name = "boscoreli_gaming";
             this.boscoreli_gaming.Size = new System.Drawing.Size(90, 35);
             this.boscoreli_gaming.TabIndex = 7;
             this.boscoreli_gaming.Text = "boscoreli";
+            this._1GUnit1ToolTip.SetToolTip(this.boscoreli_gaming, "Character:\r\nMike Boscoreli");
             this.boscoreli_gaming.UseVisualStyleBackColor = false;
             this.boscoreli_gaming.Click += new System.EventHandler(this.boscoreli_gaming_Click);
             // 
             // BFLY003
             // 
+            this.BFLY003.AutoSize = true;
             this.BFLY003.BackColor = System.Drawing.Color.IndianRed;
             this.BFLY003.Location = new System.Drawing.Point(601, 13);
             this.BFLY003.Name = "BFLY003";
             this.BFLY003.Size = new System.Drawing.Size(90, 35);
             this.BFLY003.TabIndex = 6;
             this.BFLY003.Text = "BFLY003";
+            this._1GUnit1ToolTip.SetToolTip(this.BFLY003, "Character:\r\nTorah Hart");
             this.BFLY003.UseVisualStyleBackColor = false;
             this.BFLY003.Click += new System.EventHandler(this.BFLY003_Click);
             // 
             // anthonyz_
             // 
+            this.anthonyz_.AutoSize = true;
             this.anthonyz_.BackColor = System.Drawing.Color.IndianRed;
             this.anthonyz_.Location = new System.Drawing.Point(505, 13);
             this.anthonyz_.Name = "anthonyz_";
             this.anthonyz_.Size = new System.Drawing.Size(90, 35);
             this.anthonyz_.TabIndex = 5;
             this.anthonyz_.Text = "anthonyz_";
+            this._1GUnit1ToolTip.SetToolTip(this.anthonyz_, "Character:\r\nTony Corleone\r\n");
             this.anthonyz_.UseVisualStyleBackColor = false;
             this.anthonyz_.Click += new System.EventHandler(this.anthonyz__Click);
             // 
             // AndyMilonakis
             // 
+            this.AndyMilonakis.AutoSize = true;
             this.AndyMilonakis.BackColor = System.Drawing.Color.IndianRed;
             this.AndyMilonakis.Location = new System.Drawing.Point(409, 13);
             this.AndyMilonakis.Name = "AndyMilonakis";
             this.AndyMilonakis.Size = new System.Drawing.Size(90, 35);
             this.AndyMilonakis.TabIndex = 4;
             this.AndyMilonakis.Text = "AndyMilonakis";
+            this._1GUnit1ToolTip.SetToolTip(this.AndyMilonakis, "Characters: \r\nHerbert Ward\r\nTameca Nakazawa");
             this.AndyMilonakis.UseVisualStyleBackColor = false;
             this.AndyMilonakis.Click += new System.EventHandler(this.AndyMilonakis_Click);
             // 
             // alexusnightingale
             // 
+            this.alexusnightingale.AutoSize = true;
             this.alexusnightingale.BackColor = System.Drawing.Color.IndianRed;
             this.alexusnightingale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.alexusnightingale.Location = new System.Drawing.Point(313, 13);
             this.alexusnightingale.Name = "alexusnightingale";
-            this.alexusnightingale.Size = new System.Drawing.Size(90, 35);
+            this.alexusnightingale.Size = new System.Drawing.Size(92, 35);
             this.alexusnightingale.TabIndex = 3;
             this.alexusnightingale.Text = "alexusnightingal";
+            this._1GUnit1ToolTip.SetToolTip(this.alexusnightingale, "Characters: \r\nAlei Nightingale\r\nAnastacia Ortiz");
             this.alexusnightingale.UseVisualStyleBackColor = false;
             this.alexusnightingale.Click += new System.EventHandler(this.alexusnightingale_Click);
             // 
             // AgentNorth
             // 
+            this.AgentNorth.AutoSize = true;
             this.AgentNorth.BackColor = System.Drawing.Color.IndianRed;
             this.AgentNorth.Location = new System.Drawing.Point(217, 13);
             this.AgentNorth.Name = "AgentNorth";
             this.AgentNorth.Size = new System.Drawing.Size(90, 35);
             this.AgentNorth.TabIndex = 2;
             this.AgentNorth.Text = "AgentNorth";
+            this._1GUnit1ToolTip.SetToolTip(this.AgentNorth, "Character: \r\nBilly Roadstar");
             this.AgentNorth.UseVisualStyleBackColor = false;
             this.AgentNorth.Click += new System.EventHandler(this.AgentNorth_Click);
             // 
             // AbdulHD
             // 
+            this.AbdulHD.AutoSize = true;
             this.AbdulHD.BackColor = System.Drawing.Color.IndianRed;
             this.AbdulHD.Location = new System.Drawing.Point(121, 13);
             this.AbdulHD.Name = "AbdulHD";
             this.AbdulHD.Size = new System.Drawing.Size(90, 35);
             this.AbdulHD.TabIndex = 1;
             this.AbdulHD.Text = "AbdulHD";
+            this._1GUnit1ToolTip.SetToolTip(this.AbdulHD, "Character: \r\nAbdul ALRahim");
             this.AbdulHD.UseVisualStyleBackColor = false;
             this.AbdulHD.Click += new System.EventHandler(this.AbdulHD_Click);
             // 
             // _1GUnit1
             // 
+            this._1GUnit1.AutoSize = true;
             this._1GUnit1.BackColor = System.Drawing.Color.IndianRed;
             this._1GUnit1.Location = new System.Drawing.Point(25, 13);
             this._1GUnit1.Name = "_1GUnit1";
             this._1GUnit1.Size = new System.Drawing.Size(90, 35);
             this._1GUnit1.TabIndex = 0;
             this._1GUnit1.Text = "1GUnit1";
+            this._1GUnit1ToolTip.SetToolTip(this._1GUnit1, "Character: \r\nJimmy Bean");
             this._1GUnit1.UseVisualStyleBackColor = false;
             this._1GUnit1.Click += new System.EventHandler(this._1GUnit1_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button3);
@@ -1244,9 +1338,9 @@
             this.tabPage2.Controls.Add(this.button55);
             this.tabPage2.Controls.Add(this.button56);
             this.tabPage2.Controls.Add(this.button57);
-            this.tabPage2.Controls.Add(this.button58);
-            this.tabPage2.Controls.Add(this.button59);
-            this.tabPage2.Controls.Add(this.button60);
+            this.tabPage2.Controls.Add(this.Zehring);
+            this.tabPage2.Controls.Add(this.peebro);
+            this.tabPage2.Controls.Add(this.SlaughterCo);
             this.tabPage2.Controls.Add(this.SaffyPie101);
             this.tabPage2.Controls.Add(this.Mythematic);
             this.tabPage2.Controls.Add(this.TheRealSpectral);
@@ -1271,10 +1365,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(817, 437);
+            this.tabPage2.Size = new System.Drawing.Size(827, 437);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Page 2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -1892,38 +1985,41 @@
             this.button57.Text = "N/A";
             this.button57.UseVisualStyleBackColor = false;
             // 
-            // button58
+            // Zehring
             // 
-            this.button58.BackColor = System.Drawing.Color.White;
-            this.button58.Enabled = false;
-            this.button58.Location = new System.Drawing.Point(699, 98);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(90, 35);
-            this.button58.TabIndex = 103;
-            this.button58.Text = "N/A";
-            this.button58.UseVisualStyleBackColor = false;
+            this.Zehring.BackColor = System.Drawing.Color.IndianRed;
+            this.Zehring.Location = new System.Drawing.Point(699, 98);
+            this.Zehring.Name = "Zehring";
+            this.Zehring.Size = new System.Drawing.Size(90, 35);
+            this.Zehring.TabIndex = 103;
+            this.Zehring.Text = "Zehring";
+            this._1GUnit1ToolTip.SetToolTip(this.Zehring, "Character:\r\nEzekiel Zehring");
+            this.Zehring.UseVisualStyleBackColor = false;
+            this.Zehring.Click += new System.EventHandler(this.Zehring_Click);
             // 
-            // button59
+            // peebro
             // 
-            this.button59.BackColor = System.Drawing.Color.White;
-            this.button59.Enabled = false;
-            this.button59.Location = new System.Drawing.Point(603, 98);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(90, 35);
-            this.button59.TabIndex = 102;
-            this.button59.Text = "N/A";
-            this.button59.UseVisualStyleBackColor = false;
+            this.peebro.BackColor = System.Drawing.Color.IndianRed;
+            this.peebro.Location = new System.Drawing.Point(603, 98);
+            this.peebro.Name = "peebro";
+            this.peebro.Size = new System.Drawing.Size(90, 35);
+            this.peebro.TabIndex = 102;
+            this.peebro.Text = "peebro";
+            this._1GUnit1ToolTip.SetToolTip(this.peebro, "Character:\r\nLucas Krana");
+            this.peebro.UseVisualStyleBackColor = false;
+            this.peebro.Click += new System.EventHandler(this.peebro_Click);
             // 
-            // button60
+            // SlaughterCo
             // 
-            this.button60.BackColor = System.Drawing.Color.White;
-            this.button60.Enabled = false;
-            this.button60.Location = new System.Drawing.Point(507, 98);
-            this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(90, 35);
-            this.button60.TabIndex = 101;
-            this.button60.Text = "N/A";
-            this.button60.UseVisualStyleBackColor = false;
+            this.SlaughterCo.BackColor = System.Drawing.Color.IndianRed;
+            this.SlaughterCo.Location = new System.Drawing.Point(507, 98);
+            this.SlaughterCo.Name = "SlaughterCo";
+            this.SlaughterCo.Size = new System.Drawing.Size(90, 35);
+            this.SlaughterCo.TabIndex = 101;
+            this.SlaughterCo.Text = "SlaughterCo";
+            this._1GUnit1ToolTip.SetToolTip(this.SlaughterCo, "Characters:\r\nG.G. Delaware\r\nStewart Utah\r\nTheodore Givens\r\n");
+            this.SlaughterCo.UseVisualStyleBackColor = false;
+            this.SlaughterCo.Click += new System.EventHandler(this.SlaughterCo_Click);
             // 
             // SaffyPie101
             // 
@@ -2186,9 +2282,33 @@
             this._1GUnit1ToolTip.InitialDelay = 100;
             this._1GUnit1ToolTip.ReshowDelay = 100;
             // 
+            // bunifuCircleProgressbar1
+            // 
+            this.bunifuCircleProgressbar1.animated = true;
+            this.bunifuCircleProgressbar1.animationIterval = 5;
+            this.bunifuCircleProgressbar1.animationSpeed = 1;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuCircleProgressbar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCircleProgressbar1.LabelVisible = false;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(286, 508);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCircleProgressbar1.MaxValue = 104;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.DimGray;
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(73, 73);
+            this.bunifuCircleProgressbar1.TabIndex = 8;
+            this._1GUnit1ToolTip.SetToolTip(this.bunifuCircleProgressbar1, "Click me to refresh");
+            this.bunifuCircleProgressbar1.Value = 0;
+            // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(366, 516);
+            this.refreshButton.Location = new System.Drawing.Point(366, 522);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(90, 49);
             this.refreshButton.TabIndex = 4;
@@ -2199,6 +2319,7 @@
             // refreshBackgroundWorker
             // 
             this.refreshBackgroundWorker.WorkerReportsProgress = true;
+            this.refreshBackgroundWorker.WorkerSupportsCancellation = true;
             this.refreshBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.refreshBackgroundWorker_DoWork);
             this.refreshBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.refreshBackgroundWorker_ProgressChanged);
             this.refreshBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.refreshBackgroundWorker_Complete);
@@ -2214,43 +2335,128 @@
             this.StreamerCount.TabIndex = 5;
             this.StreamerCount.Text = "Streamers Online: 0";
             // 
-            // bunifuCircleProgressbar1
+            // bunifuFlatButton1
             // 
-            this.bunifuCircleProgressbar1.animated = true;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 1;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar1.LabelVisible = false;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(292, 504);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCircleProgressbar1.MaxValue = 101;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.IndianRed;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(73, 73);
-            this.bunifuCircleProgressbar1.TabIndex = 8;
-            this._1GUnit1ToolTip.SetToolTip(this.bunifuCircleProgressbar1, "Click me to refresh");
-            this.bunifuCircleProgressbar1.Value = 0;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Options";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(754, 547);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(67, 30);
+            this.bunifuFlatButton1.TabIndex = 9;
+            this.bunifuFlatButton1.Text = "Options";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Enabled = false;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = null;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(-4, 492);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(835, 18);
+            this.bunifuFlatButton2.TabIndex = 10;
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // helpButton
+            // 
+            this.helpButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.helpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.helpButton.BorderRadius = 0;
+            this.helpButton.ButtonText = "Help";
+            this.helpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.helpButton.DisabledColor = System.Drawing.Color.Gray;
+            this.helpButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.helpButton.Iconimage = null;
+            this.helpButton.Iconimage_right = null;
+            this.helpButton.Iconimage_right_Selected = null;
+            this.helpButton.Iconimage_Selected = null;
+            this.helpButton.IconMarginLeft = 0;
+            this.helpButton.IconMarginRight = 0;
+            this.helpButton.IconRightVisible = true;
+            this.helpButton.IconRightZoom = 0D;
+            this.helpButton.IconVisible = true;
+            this.helpButton.IconZoom = 90D;
+            this.helpButton.IsTab = false;
+            this.helpButton.Location = new System.Drawing.Point(12, 547);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.helpButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.helpButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.helpButton.selected = false;
+            this.helpButton.Size = new System.Drawing.Size(66, 30);
+            this.helpButton.TabIndex = 11;
+            this.helpButton.Text = "Help";
+            this.helpButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpButton.Textcolor = System.Drawing.Color.White;
+            this.helpButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(824, 583);
+            this.Controls.Add(this.helpButton);
+            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.bunifuCircleProgressbar1);
             this.Controls.Add(this.StreamerCount);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.vlcbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -2258,6 +2464,7 @@
             this.Text = "The FamilyRP Streambox v1.3.1.0";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2408,9 +2615,9 @@
         private System.Windows.Forms.Button button55;
         private System.Windows.Forms.Button button56;
         private System.Windows.Forms.Button button57;
-        private System.Windows.Forms.Button button58;
-        private System.Windows.Forms.Button button59;
-        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.Button Zehring;
+        private System.Windows.Forms.Button peebro;
+        private System.Windows.Forms.Button SlaughterCo;
         private System.Windows.Forms.Button SaffyPie101;
         private System.Windows.Forms.Button Mythematic;
         private System.Windows.Forms.Button TheRealSpectral;
@@ -2436,6 +2643,9 @@
         private System.ComponentModel.BackgroundWorker refreshBackgroundWorker;
         private System.Windows.Forms.Label StreamerCount;
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton helpButton;
     }
 }
 
